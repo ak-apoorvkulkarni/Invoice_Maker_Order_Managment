@@ -1,5 +1,7 @@
 # Ayurvedic Invoice & Quote Maker
 
+**→ [Open the live app](https://ak-apoorvkulkarni.github.io/Invoice_Maker_Order_Managment/)** (use this link on your phone or browser — the repo URL above is for code only.)
+
 A simple web app for an Ayurvedic practitioner to:
 
 - **Orders**: Add medicine/recipe orders with ingredients (raw material name + price paid), total quantity to make, work hours, and labor rate. Get an automatic **Order ID** and **cost per unit**.
@@ -33,7 +35,7 @@ Open [http://localhost:5173](http://localhost:5173).
 
    **https://ak-apoorvkulkarni.github.io/Invoice_Maker_Order_Managment/**
 
-Open this URL on your phone or any device. Each push to `main` will redeploy automatically.
+Use that link to open the app (phone or desktop). The repo URL `github.com/.../Invoice_Maker_Order_Managment` only shows code; the **.github.io** URL is the actual website. Each push to `main` will redeploy automatically.
 
 ## Build for production
 
