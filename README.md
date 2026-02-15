@@ -17,6 +17,18 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173).
 
+## Live deployment (use on mobile)
+
+The repo deploys via **GitHub Actions** to **GitHub Pages**. To go live:
+
+1. On GitHub: repo → **Settings** → **Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Each push to `main` builds and deploys. The app will be at:
+
+   **https://ak-apoorvkulkarni.github.io/Invoice_Maker_Order_Managment/**
+
+Open this URL on your phone or any device. Data is in the browser (localStorage); works offline after first load and is mobile-friendly.
+
 ## Build for production
 
 ```bash
