@@ -19,22 +19,21 @@ Open [http://localhost:5173](http://localhost:5173).
 
 ## Live deployment (use on mobile)
 
-The repo deploys via **GitHub Actions** to **GitHub Pages**. To go live:
+1. **Run the deploy once** so the `gh-pages` branch is created:
+   - Open the repo on GitHub → **Actions** tab.
+   - Click **Deploy to gh-pages branch** in the left sidebar.
+   - Click **Run workflow** (top right) → **Run workflow**. Wait until the run finishes (green ✓).
 
-1. On GitHub: repo → **Settings** → **Pages**.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-3. Each push to `main` builds and deploys. The app will be at:
+2. **Turn on GitHub Pages**:
+   - Go to **Settings** → **Pages**.
+   - Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+   - Set **Branch** to `gh-pages`, **Folder** to `/ (root)`. Save.
+
+3. After 1–2 minutes the app will be live at:
 
    **https://ak-apoorvkulkarni.github.io/Invoice_Maker_Order_Managment/**
 
-Open this URL on your phone or any device. Data is in the browser (localStorage); works offline after first load and is mobile-friendly.
-
-**If you see "404 File not found":**
-
-1. In the repo go to **Settings** → **Pages**.
-2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not "Deploy from a branch"). Save.
-3. Go to the **Actions** tab, open the "Deploy to GitHub Pages" workflow, and click **Run workflow** → **Run workflow**. Wait until it finishes (green check).
-4. Reload the live URL; it can take 1–2 minutes to update.
+Open this URL on your phone or any device. Each push to `main` will redeploy automatically.
 
 ## Build for production
 
