@@ -1,0 +1,281 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.tabs button.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: var(--accent);
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  min-width: 120px;
+}
+
+.form-row input,
+.form-row select {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  min-width: 140px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  background: var(--accent);
+  color: white;
+}
+
+.btn:hover {
+  background: var(--accent-light);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn-ghost:hover {
+  background: rgba(45, 90, 61, 0.1);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+.ingredients-list {
+  margin: 12px 0;
+}
+
+.ingredient-row {
+  display: grid;
+  grid-template-columns: 1fr 120px 36px;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.ingredient-row input {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.summary {
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--bg);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.summary strong {
+  color: var(--accent);
+}
+
+.orders-list,
+.packages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.orders-list li,
+.packages-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: white;
+}
+
+.quote-box {
+  background: var(--bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 16px;
+  border: 2px solid var(--accent);
+}
+
+.quote-box .big-price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.settings-grid {
+  display: grid;
+  gap: 12px;
+  max-width: 400px;
+}
+
+.settings-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.settings-grid input {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.package-block {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: white;
+}
+
+.package-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.package-row input {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.package-multiplier {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.package-multiplier input {
+  width: 64px;
+  padding: 6px 8px;
+}
+
+.package-contents {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.package-item-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.package-item-row select {
+  min-width: 200px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.package-custom-label {
+  min-width: 140px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.package-qty {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.package-qty input {
+  width: 56px;
+  padding: 6px 8px;
+}
+
+.package-quote-summary {
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--bg);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.package-quote-summary ul {
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+}
+
+.package-quote-summary li {
+  margin-bottom: 4px;
+}
+
+.empty-state {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 32px 16px;
+}
