@@ -29,6 +29,13 @@ The repo deploys via **GitHub Actions** to **GitHub Pages**. To go live:
 
 Open this URL on your phone or any device. Data is in the browser (localStorage); works offline after first load and is mobile-friendly.
 
+**If you see "404 File not found":**
+
+1. In the repo go to **Settings** → **Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not "Deploy from a branch"). Save.
+3. Go to the **Actions** tab, open the "Deploy to GitHub Pages" workflow, and click **Run workflow** → **Run workflow**. Wait until it finishes (green check).
+4. Reload the live URL; it can take 1–2 minutes to update.
+
 ## Build for production
 
 ```bash
