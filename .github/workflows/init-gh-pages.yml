@@ -1,0 +1,35 @@
+# Run this ONCE manually so gh-pages branch exists. Then set Settings → Pages → Deploy from branch → gh-pages.
+name: Create gh-pages branch (run once)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create gh-pages with placeholder
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin gh-pages 2>/dev/null; then
+            echo "gh-pages already exists"
+            exit 0
+          fi
+          git checkout --orphan gh-pages
+          git reset --hard
+          echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Loading</title></head><body>Deploying…</body></html>' > index.html
+          touch .nojekyll
+          git add index.html .nojekyll
+          git commit -m "chore: init gh-pages"
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" gh-pages

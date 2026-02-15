@@ -21,21 +21,29 @@ Open [http://localhost:5173](http://localhost:5173).
 
 ## Live deployment (use on mobile)
 
-1. **Run the deploy once** so the `gh-pages` branch is created:
-   - Open the repo on GitHub → **Actions** tab.
-   - Click **Deploy to gh-pages branch** in the left sidebar.
-   - Click **Run workflow** (top right) → **Run workflow**. Wait until the run finishes (green ✓).
+Do these steps **in order** so the site stops showing 404:
+
+0. **Allow Actions to push** (needed for deployment):
+   - **Settings** → **Actions** → **General**.
+   - Under "Workflow permissions", choose **Read and write permissions**. Save.
+
+1. **Create the `gh-pages` branch** (once):
+   - **Actions** tab → click **Create gh-pages branch (run once)** in the left sidebar.
+   - Click **Run workflow** → **Run workflow**. Wait until it finishes (green ✓).
 
 2. **Turn on GitHub Pages**:
-   - Go to **Settings** → **Pages**.
-   - Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-   - Set **Branch** to `gh-pages`, **Folder** to `/ (root)`. Save.
+   - **Settings** → **Pages**.
+   - **Build and deployment** → **Source**: **Deploy from a branch**.
+   - **Branch**: `gh-pages`, **Folder**: `/ (root)`. Save.
 
-3. After 1–2 minutes the app will be live at:
+3. **Deploy the app**:
+   - **Actions** tab → **Deploy to gh-pages branch** → **Run workflow** → **Run workflow**. Wait until it finishes (green ✓).
+
+4. After 1–2 minutes, open the app at:
 
    **https://ak-apoorvkulkarni.github.io/Invoice_Maker_Order_Managment/**
 
-Use that link to open the app (phone or desktop). The repo URL `github.com/.../Invoice_Maker_Order_Managment` only shows code; the **.github.io** URL is the actual website. Each push to `main` will redeploy automatically.
+Use that link on your phone or desktop. Each push to `main` will redeploy automatically.
 
 ## Build for production
 
